@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Clean docker environment by stopping all containers, remove
+# all containers, delete all images and volumes. 
+
+docker-stop-all
+docker-remove-all
+docker image prune -a
+docker volume prune
+
