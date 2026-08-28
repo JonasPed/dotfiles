@@ -33,3 +33,6 @@ function add_keys
         ssh-add -q < /dev/null
     end
 end
+
+add_keys
+

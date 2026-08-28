@@ -37,3 +37,9 @@ if command -v lsd &> /dev/null
         alias ls=lsd
 end
 
+function jwtd
+    if type -q jq
+        echo $argv[1] | jq -R 'split(".") | .[0],.[1] | @base64d | fromjson'
+        echo "Signature: (echo $argv[1] | awk -F'.' '{print $3}')"
+    end
+end
