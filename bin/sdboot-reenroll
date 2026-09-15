@@ -1,5 +1,0 @@
-#!/bin/sh
-
-# Re-enroll tpm2 unlock after bios update.
-sudo sdbootutil enroll --method=tpm2 --ask-recovery-pin 
-sudo sdbootutil update.
